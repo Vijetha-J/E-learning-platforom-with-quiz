@@ -1,0 +1,70 @@
+[
+{
+  "model": "courses.subject",
+  "fields": {
+    "title": "Python",
+    "slug": "python"
+  },
+  "pk": 1
+},
+{
+  "model": "courses.course",
+  "fields": {
+    "owner": 1,
+    "subject": 1,
+    "title": "Python 2",
+    "slug": "python-2",
+    "overview": "dddddLll",
+    "created": "2018-03-06T00:43:22.574Z"
+  },
+  "pk": 1
+},
+{
+  "model": "courses.course",
+  "fields": {
+    "owner": 1,
+    "subject": 1,
+    "title": "Django",
+    "slug": "django",
+    "overview": "Aenean massa. Etiam sit amet orci eget eros faucibus tincidunt. Morbi vestibulum volutpat enim. Morbi mattis ullamcorper velit..",
+    "created": "2018-03-06T00:48:52.546Z"
+  },
+  "pk": 2
+},
+{
+  "model": "courses.module",
+  "fields": {
+    "course": 1,
+    "title": "M\u00f3dulo 1",
+    "description": "Phasellus tempus. Integer tincidunt. Fusce convallis metus id felis luctus adipiscing. Fusce pharetra convallis urna. Curabitur a felis in nunc fringilla tristique."
+  },
+  "pk": 1
+},
+{
+  "model": "courses.module",
+  "fields": {
+    "course": 1,
+    "title": "M\u00f3dulo 2",
+    "description": "Praesent vestibulum dapibus nibh. Sed fringilla mauris sit amet nibh. Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Aenean viverra rhoncus pede. Fusce fermentum."
+  },
+  "pk": 2
+},
+{
+  "model": "courses.module",
+  "fields": {
+    "course": 2,
+    "title": "Django 1",
+    "description": "Phasellus tempus. Curabitur a felis in nunc fringilla tristique. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Aenean vulputate eleifend tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed aliquam, nisi quis porttitor congue, elit erat euismod orci, ac placerat dolor lectus quis orci."
+  },
+  "pk": 3
+},
+{
+  "model": "courses.module",
+  "fields": {
+    "course": 2,
+    "title": "Django 2",
+    "description": "Nunc nulla. Maecenas ullamcorper, dui et placerat feugiat, eros pede varius nisi, condimentum viverra felis nunc et lorem. Aenean viverra rhoncus pede. Sed in libero ut nibh placerat accumsan. Quisque libero metus, condimentum nec, tempor a, commodo mollis, magna."
+  },
+  "pk": 4
+}
+]

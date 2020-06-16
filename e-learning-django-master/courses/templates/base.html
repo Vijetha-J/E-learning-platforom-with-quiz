@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html xmlns:fb="http://www.facebook.com/2008/fbml" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>{% block title %}Educa{% endblock %}</title>
+    <link href="{% static "css/base.css" %}" rel="stylesheet">
+    
+</head>
+<body>
+
+    <div id="header">
+        <a href="/" class="logo">Educa</a>
+        <ul class="menu">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav rm-auto">
+            {% if request.user.is_authenticated %}
+                <li><a href="{% url "logout" %}">Sign out</a></li>
+                <li class="nav-tem" style="color:#efefef">
+          				<a href="{% url 'quiz_index' %}" class="nav-link">Quizzes</a>
+      		    </li>
+       		    <li class="nav-tem" style="color:#efefef">
+           			 <a href="{% url 'quiz_progress' %}" class="nav-link">Progress</a>
+                </li>
+            {% else %}
+                <li><a href="{% url "login" %}">Sign in</a></li>
+            {% endif %}
+            </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item ">
+        </li>
+      </ul>
+    </div>
+        </ul>
+    </div>
+    </nav>
+    <div id="content">
+    <!-- Before the quiz content -->
+
+
+
+
+
+  <div class="container">
+    {% if messages %} {% for message in messages %}
+    <div class="alert alert-warning alert-dismissable" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true"><sup>&times;</sup></span>
+      </button>
+      {{message}}
+    </div>
+    {% endfor %} {% endif %} {% block content %} {% endblock %}
+
+  </div>
+
+  <!-- After the quiz content -->
+  
+      
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            {% block domready %}
+            {% endblock %}
+        });
+    </script>
+
+
+
+
+ 
+  
+  
+  
+  
+  
+
+</body>
+
+</html>
